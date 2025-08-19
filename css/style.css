@@ -247,6 +247,20 @@
     .mob-view{
         font-size: 10px;
     }
+    .ribet-h1{
+        font-family: "Bebas Neue";
+        margin-top: 10%;
+        font-size: 8vh;
+    }
+    /* "text-align: center; font-size:1.8vh; color: aliceblue; display: flexbox;justify-content: center;font-family: Julius Sans One; " class="mob-view ribet-i">Cre */
+    .ribet-i{
+        text-align: center;
+        font-size: 1.8vh;
+        color: aliceblue;
+        display: flexbox;
+        justify-content: center;
+        font-family: "Julius Sans One", sans-serif;;
+    }
     
 }
 
@@ -257,7 +271,14 @@
     .nav-kecil{
         display: none;
     }
-    
+    .ribet-h1{
+
+    }
+    .ribet-i{
+        font-size: 10vh;
+        color: aliceblue;
+        font-family: "Julius Sans One", sans-serif;
+    }
 }
 
 .page-header {

@@ -17,6 +17,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap"
         rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
@@ -42,23 +49,33 @@
 
 
     <!-- Topbar Start -->
+     <div class="nav-kecil">
+        <div class="d-flex align-items-center" style="background-color: #ffc107; padding-top: 10px; padding-bottom: 10px;">
+            <div class="ms-auto d-flex align-items-center">
+                    <small class="ms-4" style="font-size: 10px;"><i class="fa fa-map-marker-alt me-3"></i><a href="https://maps.app.goo.gl/dkwqErMNWsU5XDV98">Cempaka Putih</a></small>
+                    <small class="ms-4" style="font-size: 10px;"><i class="fa fa-envelope me-3"></i><a href="#contact" style="color: gray;">wijayaciptarasakiancak@gmail.com</a></small>
+                    <small class="ms-4" style="font-size: 10px;"><i class="fa fa-phone-alt me-3"></i><a href="https://wa.me/6281381633939" style="color: gray;">+62 813-8163-3939</a></small>
+                </div>
+        </div>
+    
+     </div>
     <div class="container-fluid bg-primary text-white d-none d-lg-flex wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-3">
             <div class="d-flex align-items-center">
                 <a href="index.html">
-                    <h2 class="text-white fw-bold m-0">PT Wicira Rasakiancak</h2>
+                    <h2 class="text-white fw-bold m-0" style="font-family: Bebas neue; font-size: xx-large;">PT Wijaya Cipta Rasakiancak</h2>
                 </a>
                 <div class="ms-auto d-flex align-items-center">
-                     <small class="ms-4" style="font-size: 12px;"><i class="fa fa-map-marker-alt me-3"></i>Cempaka Putih</small>
-                    <small class="ms-4" style="font-size: 12px;"><i class="fa fa-envelope me-3"></i>wijayaciptarasakiancak@gmail.com</small>
-                    <small class="ms-4" style="font-size: 12px;"><i class="fa fa-phone-alt me-3"></i>+62 813-8163-3939</small>
+                    <small class="ms-4" style="font-size: 12px;"><i class="fa fa-map-marker-alt me-3"></i>Cempaka Putih</small>
+                    <small class="ms-4" style="font-size: 12px;"><i class="fa fa-envelope me-3"></i><a href="#contact" style="color: white;">wijayaciptarasakiancak@gmail.com</a></small>
+                    <small class="ms-4" style="font-size: 12px;"><i class="fa fa-phone-alt me-3"></i><a href="https://wa.me/6281381633939" style="color: white;">+62 813-8163-3939</a></small>
                     <div class="ms-3 d-flex">
-                        <a class="btn btn-sm-square btn-light text-primary ms-2" href=""><i
+                        <a class="btn btn-sm-square btn-light text-primary ms-2" href="https://www.facebook.com/profile.php?id=61579493611977&mibextid=ZbWKwL"><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary ms-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-light text-primary ms-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary ms-2" href="https://www.instagram.com/wicira_rasakiancak?igsh=MTVwaHFkbzk3NGpoYw=="><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary ms-2" href="https://maps.app.goo.gl/dkwqErMNWsU5XDV98"><i
+                                class="fab fa-google-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -72,7 +89,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">PT Wicira Rasakiancak</h1>
+                    <h1 class="fw-bold m-0" style="font-size: x-large; font-family: Bebas neue">PT Wijaya Cipta Rasakiancak</h1>
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -80,19 +97,30 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link active">Services</a>
-                        
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="galeri.html" class="nav-item nav-link">Galeri</a>
+                        <a href="service.html" class="nav-item nav-link">Services</a>
+                        <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="feature.html" class="dropdown-item">Features</a>
+                                <a href="team.html" class="dropdown-item">Our Team</a>
+                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="appoinment.html" class="dropdown-item">Appoinment</a>
+                                <a href="404.html" class="dropdown-item">404 Page</a>
+                            </div> -->
+                        </div>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
-                   
+                    <!-- <div class="ms-auto d-none d-lg-block">
+                        <a href="" class="btn btn-primary py-2 px-3">Get A Quote</a>
+                    </div> -->
                 </div>
             </nav>
         </div>
     </div>
     <!-- Navbar End -->
-
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header pt-5 mb-6 wow fadeIn" data-wow-delay="0.1s">
@@ -132,7 +160,7 @@
                                     <p>Huruf timbul galvanis merupakan huruf berbahan dasar metal plat galvanis di lapisi cat duco.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="./servis/servis1.html">Read More<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -146,7 +174,7 @@
                                     <p>Huruf timbul acrylic berbahan dasar acrylic memakai pencahayaan dari Lampu Led, bisa pemasangan untuk indoor dan outdoor
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="./servis/servis2.html">Read More<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -161,7 +189,7 @@
 
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="./servis/servis3.html">Read More<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -175,7 +203,7 @@
                                     <p>Display acrylic adalah display holder atau tempat wadah terbuat dari berbahan acrylic. Ketebalan acrylic mulai dari 1,5 mm, 2mm, 3mm, 4 mm, 5 mm, 8 mm, 10 mm, dst, dan berbagai macam pilihan warna.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="./servis/servis4.html">Read More<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -189,7 +217,7 @@
                                     <p>Neon box salah satu media reklame memakai penerangan lampu di dalam boxnya.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="./servis/servis5.html">Read More<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -203,7 +231,7 @@
                                     <p>Huruf timbul stainless berbahan dasar metal plat stainless miror atau hairline.  Bisa di kombinasikan pencahayaan lampu Led.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="./servis/servis6.html">Read More<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -217,7 +245,7 @@
                                     <p>Reklame billboard atau lebih dikenal dengan nama papan reklame.
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="./servis/servis7.html">Read More<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>
@@ -231,7 +259,7 @@
                                     <p>Plakat merupakan souvenir penghargaan atau piagam kenang - kenangan berupa bahan acrylic atau resin
                                     </p>
                             </div>
-                            <a class="btn btn-light px-3" href="">Read More<i
+                            <a class="btn btn-light px-3" href="./servis/servis8.html">Read More<i
                                     class="bi bi-chevron-double-right ms-1"></i></a>
                         </div>
                     </div>

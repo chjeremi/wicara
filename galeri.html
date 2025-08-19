@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
     <title>PT Wicira Rasakiancak - kustom huruf timbul jakarta termurah</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -17,6 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap"
         rel="stylesheet">
 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
@@ -24,11 +28,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Julius+Sans+One&display=swap" rel="stylesheet">
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-
-    <!-- Libraries Stylesheet -->
+<!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
@@ -37,10 +37,81 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-</head>
+<!-- <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script> -->
 
+
+  <style>
+    /* Masonry Layout */
+    .masonry {
+      column-count: 4;   /* jumlah kolom di layar besar */
+      column-gap: 10px;     /* rapat tanpa celah */
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 10px;
+    }
+    .masonry img {
+      width: 100%;
+      display: block;
+      margin: 0;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .masonry img:hover {
+  transform: scale(1.02); /* efek hover */
+}
+
+
+    /* Responsive kolom */
+    @media (max-width: 1200px) {
+      .masonry { column-count: 3; }
+    }
+    @media (max-width: 768px) {
+      .masonry { column-count: 2; }
+    }
+    @media (max-width: 576px) {
+      .masonry { column-count: 1; }
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1050;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+    .lightbox-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      animation: zoomIn .3s ease;
+    }
+    @keyframes zoomIn {
+      from {transform: scale(0.7);}
+      to {transform: scale(1);}
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
 <body>
-    <!-- Spinner Start -->
+
+  <!-- Header & Navbar (copy dari index.html biar konsisten) -->
+  <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
@@ -90,6 +161,7 @@
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <a href="index.html" class="navbar-brand d-lg-none">
                     <h1 class="fw-bold m-0" style="font-size: x-large; font-family: Bebas neue">PT Wijaya Cipta Rasakiancak</h1>
+
                 </a>
                 <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
@@ -123,156 +195,22 @@
     <!-- Navbar End -->
 
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header pt-5 mb-6 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center pt-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-7">
-                    <div class="bg-white p-5">
-                        <h1 class="display-6 text-uppercase mb-3 animated slideInDown">About</h1>
-                        <nav aria-label="breadcrumb animated slideInDown">
-                            <ol class="breadcrumb justify-content-center mb-0">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item" aria-current="page">About</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+  <!-- Gallery Start -->
+  <div class="container py-5">
+    <div class="masonry">
+      <!-- Script JS akan generate semua gambar otomatis -->
     </div>
-    <!-- Page Header End -->
+  </div>
+  <!-- Gallery End -->
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
 
-    <!-- About Start -->
-    <div class="container-fluid pt-6 pb-6">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img">
-                        <img class="img-fluid w-100" src="img/about.jpg">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-6 text-uppercase mb-4">WIJAYA CIPTA
-
-ADVERTISING</h1>
-                    <p class="mb-4">Kami siap membantu anda dengan membuat produksi kebutuhan promosi berbahan baku utama acrylic sesuai kebutuhan promosi perusahaan anda dengan kualitas bagus karena didukung oleh tenaga profesional yang berpengalaman.
-
-Silahkan hubungi kami melalui kontak yang tersedia</p>
-                    <div class="row g-5 mb-4">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0 btn-xl-square bg-light me-3">
-                                    <i class="fa fa-users-cog fa-2x text-primary"></i>
-                                </div>
-                                <h5 class="lh-base text-uppercase mb-0">Certified Expert & Team</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0 btn-xl-square bg-light me-3">
-                                    <i class="fa fa-tachometer-alt fa-2x text-primary"></i>
-                                </div>
-                                <h5 class="lh-base text-uppercase mb-0">Fast & Reliable Services</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Custom design /Acrylic laser / Sticker cutting / grafir
-                    </p>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Acylic kombinasi (galvanis, stainless, dll. )
-                    </p>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Dikerjakan oleh tenaga professional
-                    </p>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Customer service oriented
-                    </p>
-                     <p><i class="fa fa-check-square text-primary me-3"></i>Pengalaman > 15 tahun
-                    </p>
-                     <p><i class="fa fa-check-square text-primary me-3"></i>Dan masih banyak Kelebihan kami
-                    </p>
-
-                    <div class="border border-5 border-primary p-4 text-center mt-4">
-                        <h4 class="lh-base text-uppercase mb-0">Kami Ahli dalam Semua Pekerjaan Kustom Menggunakan Alat dan Bahan Berkualitas</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
-   <h1 style="text-align: center;">Anda hanya perlu</h1>
-    <!-- Features Start -->
-    <div class="container-fluid pt-6 pb-6">
-        <div class="container pt-4">
-            <div class="row g-0 feature-row wow fadeIn" data-wow-delay="0.1s">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="feature-item border h-100">
-                        <div class="feature-icon btn-xxl-square bg-primary mb-4 mt-n4">
-                            <i class="fa fa-hammer fa-2x text-white"></i>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h5 class="text-uppercase mb-3">Menghubungi kami</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                            <a class="position-relative text-body text-uppercase small d-flex justify-content-between"
-                                href="#"><b class="bg-white pe-3">Read More</b> <i
-                                    class="bi bi-arrow-right bg-white ps-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.4s">
-                    <div class="feature-item border h-100">
-                        <div class="feature-icon btn-xxl-square bg-primary mb-4 mt-n4">
-                            <i class="fa fa-dollar-sign fa-2x text-white"></i>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h5 class="text-uppercase">Berkonsultasi langsung/online</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                            <a class="position-relative text-body text-uppercase small d-flex justify-content-between"
-                                href="#"><b class="bg-white pe-3">Read More</b> <i
-                                    class="bi bi-arrow-right bg-white ps-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="feature-item border h-100">
-                        <div class="feature-icon btn-xxl-square bg-primary mb-4 mt-n4">
-                            <i class="fa fa-check-double fa-2x text-white"></i>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h5 class="text-uppercase">Memilih Material</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                            <a class="position-relative text-body text-uppercase small d-flex justify-content-between"
-                                href="#"><b class="bg-white pe-3">Read More</b> <i
-                                    class="bi bi-arrow-right bg-white ps-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.6s">
-                    <div class="feature-item border h-100">
-                        <div class="feature-icon btn-xxl-square bg-primary mb-4 mt-n4">
-                            <i class="fa fa-tools fa-2x text-white"></i>
-                        </div>
-                        <div class="p-5 pt-0">
-                            <h5 class="text-uppercase">Produk langsung dikerjakan</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue.</p>
-                            <a class="position-relative text-body text-uppercase small d-flex justify-content-between"
-                                href="#"><b class="bg-white pe-3">Read More</b> <i
-                                    class="bi bi-arrow-right bg-white ps-3"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Features End -->
-
-
-    
-
-
-   <!-- Footer Start -->
+  <!-- Footer Start -->
     <div class="container-fluid bg-dark footer py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -336,7 +274,6 @@ Silahkan hubungi kami melalui kontak yang tersedia</p>
     <!-- Footer End -->
 
 
-
     <!-- Copyright Start -->
     <div class="container-fluid text-body copyright py-4">
         <div class="container">
@@ -348,7 +285,7 @@ Silahkan hubungi kami melalui kontak yang tersedia</p>
                     <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                     <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                     <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></a>
+                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
                 </div>
             </div>
         </div>
@@ -371,7 +308,75 @@ Silahkan hubungi kami melalui kontak yang tersedia</p>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
     <script src="js/main.js"></script>
+
+    <!-- EmailJS Script -->
+<!-- <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>s -->
+<script>
+    emailjs.init("_Oi7NzTCiJwwklyec"); // Ganti dengan Public Key dari EmailJS
+
+    document.getElementById('appointment-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('service_cpst18r', 'template_vg5pq0t', this)
+            .then(function() {
+                alert('✅ Pesan berhasil dikirim!');
+                document.getElementById('appointment-form').reset();
+            }, function(error) {
+                alert('❌ Gagal mengirim pesan: ' + JSON.stringify(error));
+            });
+    });
+</script>
+<script>
+    const masonry = document.querySelector(".masonry");
+
+    // Tambahkan gambar galeri1 sampai galeri15
+    for (let i = 1; i <= 15; i++) {
+      masonry.innerHTML += `
+        <div class="masonry-item">
+          <img src="img/galeri${i}.jpg" alt="Galeri ${i}" class="gallery-img">
+        </div>`;
+    }
+
+    // Tambahkan gambar 16 sampai 83
+    for (let i = 16; i <= 83; i++) {
+      masonry.innerHTML += `
+        <div class="masonry-item">
+          <img src="img/${i}.jpg" alt="Galeri ${i}" class="gallery-img">
+        </div>`;
+    }
+
+    // Lightbox function
+    const galleryImages = document.querySelectorAll(".gallery-img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".lightbox-close");
+
+    galleryImages.forEach(img => {
+      img.addEventListener("click", function() {
+        lightbox.style.display = "block";
+        lightboxImg.src = this.src;
+      });
+    });
+
+    closeBtn.addEventListener("click", function() {
+      lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", function(e) {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+  </script>
+
+
+
 </body>
 
 </html>
+
+ 
