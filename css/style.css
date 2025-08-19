@@ -244,6 +244,9 @@
     .nav-kecil{
         display: flex;
     }
+    .mob-view{
+        font-size: 10px;
+    }
     
 }
 
