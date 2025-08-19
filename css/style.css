@@ -138,6 +138,8 @@
         margin-top: 15px;
         border-top: 1px solid #EEEEEE;
     }
+
+   
 }
 
 @media (min-width: 992px) {
@@ -239,12 +241,20 @@
     .carousel .carousel-caption {
         padding-left: 9rem;
     }
+    .nav-kecil{
+        display: flex;
+    }
+    
 }
 
 @media (min-width: 1200px) {
     .carousel .carousel-item .display-1 {
         font-size: 7rem;
     }
+    .nav-kecil{
+        display: none;
+    }
+    
 }
 
 .page-header {
