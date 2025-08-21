@@ -205,6 +205,15 @@
     object-fit: cover;
 }
 
+.ribet-h1{
+        font-family: "Bebas Neue", sans-serif;
+    }
+    .ribet-i{
+        font-size: 10vh;
+        color: aliceblue;
+        font-family: "Julius Sans One", sans-serif;
+    }
+
 @media (max-width: 992px) {
     .carousel .carousel-item {
         position: relative;
@@ -225,6 +234,15 @@
 
     .carousel .carousel-caption {
         padding-left: 10rem;
+    }
+
+    .ribet-h1{
+        font-family: "Bebas Neue", sans-serif;
+    }
+    .ribet-i{
+        font-size: 10vh;
+        color: aliceblue;
+        font-family: "Julius Sans One", sans-serif;
     }
 }
 
