@@ -159,7 +159,20 @@
         transition: .5s;
         opacity: 1;
     }
+
+    .ribet-i{
+        font-size: 9vh;
+        color: aliceblue;
+        font-family: "Julius Sans One", sans-serif;
+    }
+     .ribet-h1{
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 18vh;
+    }
+        
+
 }
+
 
 
 /*** Header ***/
@@ -205,14 +218,14 @@
     object-fit: cover;
 }
 
-.ribet-h1{
+/* .ribet-h1{
         font-family: "Bebas Neue", sans-serif;
     }
     .ribet-i{
         font-size: 10vh;
         color: aliceblue;
         font-family: "Julius Sans One", sans-serif;
-    }
+    } */
 
 @media (max-width: 992px) {
     .carousel .carousel-item {
