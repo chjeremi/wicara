@@ -308,9 +308,9 @@
 }
 
 @media (min-width: 1200px) {
-    .carousel .carousel-item .display-1 {
-        font-size: 7rem;
-    }
+    /* .carousel .carousel-item .display-1 {
+        font-size: 4rem;
+    } */
     .nav-kecil{
         display: none;
     }
@@ -324,13 +324,7 @@
         color: white;
         font-family: "Julius Sans One", sans-serif;
     }
-    .ribet-h1{
-        font-size: 30vh;
     
-    }
-    .ribet-i{
-        font-size: 7vh;
-    }
 }
 
 .page-header {
