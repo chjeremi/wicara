@@ -173,6 +173,15 @@
 
 }
 
+.ribet-h1{
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 18vh;
+}
+.ribet-i{
+        font-size: 9vh;
+        color: aliceblue;
+        font-family: "Julius Sans One", sans-serif;
+}
 
 
 /*** Header ***/
