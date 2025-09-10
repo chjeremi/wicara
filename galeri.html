@@ -41,6 +41,37 @@
 
 
   <style>
+    .filter-container {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+    -ms-overflow-style: none;
+  }
+  .filter-container::-webkit-scrollbar {
+    display: none; /* hilangin scrollbar biar clean */
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    padding: 0.4rem 1rem;
+    border: 1px solid #ffc107;
+    background: white;
+    color: #ffc107;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+  }
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: #ffc107;
+    color: white;
+  }
+
+  /* agar di layar besar tombol bisa wrap */
+  
     /* Masonry Layout */
     .masonry {
       column-count: 4;   /* jumlah kolom di layar besar */
@@ -68,6 +99,10 @@
     }
     @media (max-width: 768px) {
       .masonry { column-count: 2; }
+      .filter-container {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
     }
     @media (max-width: 576px) {
       .masonry { column-count: 1; }
@@ -196,13 +231,19 @@
 
 
 
-  <!-- Gallery Start -->
-  <div class="container py-5">
-    <div class="masonry">
-      <!-- Script JS akan generate semua gambar otomatis -->
-    </div>
+<div class="container py-5">
+  <div class="filter-container mb-4">
+    <button class="btn filter-btn active" data-filter="all">Semua</button>
+    <button class="btn filter-btn" data-filter="st">Huruf Timbul Stainless</button>
+    <button class="btn filter-btn" data-filter="ak">Huruf Timbul Akrilik</button>
+    <button class="btn filter-btn" data-filter="nf">Signage Neon Flexy</button>
+    <button class="btn filter-btn" data-filter="nb">Custom Neon Box</button>
+    <button class="btn filter-btn" data-filter="bb">Billboard Advertising</button>
   </div>
-  <!-- Gallery End -->
+  <div class="masonry" id="gallery-container">
+    <!-- JS generate -->
+  </div>
+</div>
 
   <!-- Lightbox Modal -->
   <div id="lightbox" class="lightbox">
@@ -331,46 +372,79 @@
     });
 </script>
 <script>
-    const masonry = document.querySelector(".masonry");
+   const masonry = document.getElementById("gallery-container");
 
-    // Tambahkan gambar galeri1 sampai galeri15
-    for (let i = 1; i <= 15; i++) {
+  // jumlah contoh per kategori (ubah sesuai koleksi real)
+  const imageCategories = {
+    st: 9, // stainless st-1 sampai st-6
+    ak: 44, // ak-1 sampai ak-5
+    nf: 19, // nf-1 sampai nf-4
+    nb: 13, // nb-1 sampai nb-3
+    bb: 2  // bb-1 sampai bb-5
+  };
+
+  // generate gambar
+  for (let category in imageCategories) {
+    for (let i = 1; i <= imageCategories[category]; i++) {
       masonry.innerHTML += `
-        <div class="masonry-item">
-          <img src="img/galeri${i}.jpg" alt="Galeri ${i}" class="gallery-img">
+        <div class="masonry-item" data-category="${category}">
+          <img src="img/${category}-${i}.jpg" alt="${category.toUpperCase()} ${i}" class="gallery-img">
         </div>`;
     }
+  }
 
-    // Tambahkan gambar 16 sampai 83
-    for (let i = 16; i <= 83; i++) {
-      masonry.innerHTML += `
-        <div class="masonry-item">
-          <img src="img/${i}.jpg" alt="Galeri ${i}" class="gallery-img">
-        </div>`;
-    }
+  // filter tombol
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const galleryItems = document.querySelectorAll(".masonry-item");
 
-    // Lightbox function
-    const galleryImages = document.querySelectorAll(".gallery-img");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    const closeBtn = document.querySelector(".lightbox-close");
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
 
-    galleryImages.forEach(img => {
-      img.addEventListener("click", function() {
-        lightbox.style.display = "block";
-        lightboxImg.src = this.src;
+      // ubah tombol aktif
+      filterButtons.forEach(btn => {
+        btn.classList.remove("btn-primary");
+        btn.classList.add("btn-outline-primary");
+      });
+      button.classList.add("btn-primary");
+      button.classList.remove("btn-outline-primary");
+
+      // filter gambar dengan animasi fade
+      galleryItems.forEach(item => {
+        if (filter === "all" || item.dataset.category === filter) {
+          item.style.display = "block";
+          item.style.opacity = 0;
+          setTimeout(() => { item.style.opacity = 1; }, 100);
+        } else {
+          item.style.opacity = 0;
+          setTimeout(() => { item.style.display = "none"; }, 200);
+        }
       });
     });
+  });
 
-    closeBtn.addEventListener("click", function() {
+  // lightbox
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".lightbox-close");
+
+  document.addEventListener("click", e => {
+    if (e.target.classList.contains("gallery-img")) {
+      lightbox.style.display = "block";
+      lightboxImg.src = e.target.src;
+      lightboxImg.style.animation = "zoomIn .3s ease"; // animasi
+    }
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", e => {
+    if (e.target === lightbox) {
       lightbox.style.display = "none";
-    });
-
-    lightbox.addEventListener("click", function(e) {
-      if (e.target === lightbox) {
-        lightbox.style.display = "none";
-      }
-    });
+    }
+  });
   </script>
 
 
